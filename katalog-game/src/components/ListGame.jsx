@@ -10,10 +10,10 @@ export default function ListGame({ dataGame }) {
             {dataGame.length === 0 ? ("Belum ada data Game") :
                 (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                        {dataGame.map((item, index) => (
+                        {dataGame.map((item) => (
                             <CardGame
                                 onClick={() => { setSelectedGame(item) }}
-                                key={index}
+                                key={item}
                                 dataGame={item}
                             />
                         ))}
